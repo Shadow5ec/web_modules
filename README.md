@@ -3,12 +3,13 @@ esential_web_modules
 
 You can find it here https://github.com/psf/requests
 
+# Requests 
 Installation
 ```bash
  python -m pip install requests
 ````
 
-# sending a get reqeust. 
+#### sending a get reqeust. 
 
 ```bash
 import requests
@@ -16,7 +17,7 @@ r = requests.get('https://api.github.com/events')
 print(r)
 ```
 
-# sending a post request. 
+#### sending a post request. 
 
 ```bash
 import requests
@@ -26,7 +27,7 @@ r = requests.put('https://httpbin.org/put', data = {'key':'value'})
 r = requests.delete('https://httpbin.org/delete')
 r = requests.options('https://httpbin.org/get')
 ```
-#passing parameters in url. 
+#### passing parameters in url. 
 ```python
 payload = {'key1': 'value1', 'key2': 'value2'}
 r = requests.get('https://httpbin.org/get', params=payload)
@@ -40,7 +41,7 @@ r = requests.get('https://httpbin.org/get', params=payload)
 print(r.url)
 https://httpbin.org/get?key1=value1&key2=value2&key2=value3
 ```
-# Getting response from content 
+#### Getting response from content 
 ```python
 # response as text.
 r = requests.get('https://api.github.com/events')
@@ -63,7 +64,7 @@ r = requests.get('https://api.github.com/events')
 r.json()
 ```
 
-# Custom Headers 
+#### Custom Headers 
 
 ```python
 url = 'https://api.github.com/some/endpoint'
@@ -71,7 +72,7 @@ headers = {'user-agent': 'my-app/0.0.1'}
 r = requests.get(url, headers=headers)
 
 ```
-# Custom POST Request. 
+#### Custom POST Request. 
 
 ```python
 payload = {'key1': 'value1', 'key2': 'value2'}
@@ -106,9 +107,9 @@ r2 = requests.post('https://httpbin.org/post', data=payload_dict)
 >>> r1.text == r2.text
 True
 ```
-# Sending data and files POST request. 
+#### Sending data and files POST request. 
 
-# Response Headers 
+#### Response Headers 
 ```python
 >>> r.headers
 {
@@ -128,7 +129,7 @@ True
 >>> r.headers.get('content-type')
 'application/json'
 ```
-# Cookies 
+#### Cookies 
 ```python
 
 >>> url = 'http://example.com/some/cookie/setting/url'
@@ -155,7 +156,7 @@ True
 '{"cookies": {"tasty_cookie": "yum"}}'
 
 ```
-# Redirection and History  
+#### Redirection and History  
 ```python
 #handel redirects.
 
@@ -176,7 +177,7 @@ True
 >>> r.history
 [<Response [301]>]
 ```
-
+# Beautfil Soup 
 
 
 
